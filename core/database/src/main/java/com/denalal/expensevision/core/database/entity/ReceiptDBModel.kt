@@ -1,4 +1,13 @@
 package com.denalal.expensevision.core.database.entity
 
-class ReceiptDBModel {
-}
+import androidx.room3.Entity
+import androidx.room3.PrimaryKey
+
+@Entity(tableName = "receipts")
+data class ReceiptDBModel(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val date: Long,
+    val sum: Long,
+    val storeName: String?,
+    val category: String,
+)
